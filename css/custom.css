@@ -1,0 +1,7 @@
+.bold{
+    font-weight: bold;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
