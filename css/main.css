@@ -1,0 +1,13 @@
+.bld{
+    font-weight: bold;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+.back{
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: no-repeat;
+}

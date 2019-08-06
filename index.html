@@ -7,80 +7,119 @@
     <title>Easy Market</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
 </head>
 <body>
-    <!--Todo el navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!--Botón con el logo-->
-            <a class="navbar-brand" href="#" style="position:fixed;">
-                <img src="img/logo-sm.png">
-            </a>
-            <!--Elementos de la barra-->
-            <ul class="navbar-nav mr-auto ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link bld" href="#">Ofertas de Hoy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link bld" href="#">Promociones</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <!--Botón desplegable de la barra-->
-                    <a class="nav-link dropdown-toggle bld" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Categorias
-                    </a>
-                    <!--Elementos desplegables-->
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item bld" href="#">Belleza</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bld" href="#">Deportes</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bld" href="#">Electrónica</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bld" href="#">Hogar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bld" href="#">Informática</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bld" href="#">Juguetes</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bld" href="#">Libros</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bld" href="#">Moda</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bld" href="#">Videojuegos</a>
+    <div class="back">
+        <!--Todo el navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!--Botón con el logo-->
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.svg">
+                </a>
+                <!--Elementos de la barra-->
+                <ul class="navbar-nav mr-auto ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link bld" href="#">Ofertas de Hoy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bld" href="#">Promociones</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <!--Botón desplegable de la barra-->
+                        <a class="nav-link dropdown-toggle bld" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Categorias
+                        </a>
+                        <!--Elementos desplegables-->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item bld" href="#">Belleza</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item bld" href="#">Deportes</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item bld" href="#">Electrónica</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item bld" href="#">Hogar</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item bld" href="#">Informática</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item bld" href="#">Juguetes</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item bld" href="#">Libros</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item bld" href="#">Moda</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item bld" href="#">Videojuegos</a>
+                        </div>
+                        <!--Otros elementos de la barra-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bld" href="#">Empresas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bld" href="#">Contacto</a>
+                    </li>
+                </ul>
+                <div class="d-flex" id="navbarSupportedContent">
+                    <!--Botón de Busqueda-->
+                    <div class="nav-item">
+                        <a class="navbar-brand" href="#">
+                            <img src="img/search.svg" alt="Busqueda--" style="width: 25px; height:25px;">
+                        </a>
                     </div>
-                    <!--Otros elementos de la barra-->
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link bld" href="#">Empresas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link bld" href="#">Contacto</a>
-                </li>
-            </ul>
-            <div class="d-flex" id="navbarSupportedContent">
-                <!--Botón de Busqueda-->
-                <div class="nav-item">
-                    <a class="navbar-brand" href="#">
-                        <img src="img/search.svg" alt="Busqueda--" style="width: 25px; height:25px;">
-                    </a>
+                    <!--Botón de Inicio de Sesión-->
+                    <div class="nav-item">
+                        <a class="navbar-brand" href="#">
+                            <img src="img/login.svg" alt="login" style="width: 25px; height:25px;">
+                        </a>
+                    </div>
+                    <!--Botón del carrito-->
+                    <div class="nav-item">
+                        <a class="navbar-brand" href="#">
+                            <img src="img/carrito.svg" alt="comprar" style="width: 25px; height:25px;">
+                        </a> 
+                    </div>
                 </div>
-                <!--Botón de Inicio de Sesión-->
-                <div class="nav-item">
-                    <a class="navbar-brand" href="#">
-                        <img src="img/login.svg" alt="login" style="width: 25px; height:25px;">
-                    </a>
-                </div>
-                <!--Botón del carrito-->
-                <div class="nav-item">
-                    <a class="navbar-brand" href="#">
-                        <img src="img/carrito.svg" alt="comprar" style="width: 25px; height:25px;">
-                    </a> 
-                </div>
-            </div>
-          </div>
-    </nav>
+              </div>
+        </nav>
+        <div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
