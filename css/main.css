@@ -1,16 +1,46 @@
+body, html {
+    height: 100%;
+}
 .bld{
     font-weight: bold;
+}
+.bld:hover{
+    font-size: 18px;
 }
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 2rem;
     padding-left: 2rem;
 }
-.back{
-    background-image: url("../img/background.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-attachment: no-repeat;
-}
 .dropdown-menu{
         background-color: #ffffff91;
+}
+.back{
+    background-image: url("../img/background.png");
+    background-size: cover;
+    background-position: center center;
+    background-color: white;
+    background-repeat: no-repeat;
+}
+.icon{
+    font-size: 25px;
+    color: #222831;
+}
+.icon:hover{
+    font-size: 29px;
+    color: black;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #222831;
+}
+.navbar-scroll:hover{
+    background-color: #00adb5;
+    transition: all 1s ease;
+}
+.navbar-scroll{
+    background-color: #00adb5;
+    transition: all 1s ease;
+}
+.hov:hover{
+    background-color: #00adb5;
+    transition: all 1s ease;
 }
