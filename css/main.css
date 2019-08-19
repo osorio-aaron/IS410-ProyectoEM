@@ -64,3 +64,23 @@ html {
     color: #00adb5!important;
     text-align: center;
 }
+.producto{
+    margin-bottom: 30px;
+    background-color: #eeeeee86;
+    border-radius: 5px;
+    border: 1px solid #393e46;
+}
+.producto:hover{
+    background-color: white;
+    border: 1px solid #00adb5;
+}
+.imagen-producto{
+    position: relative;
+    border-bottom: 2px solid #393e46;
+}
+.imagen-producto:hover{
+    border-bottom: 2px solid #00adb5;
+}
+.container{
+    margin-top: 100px;
+}
