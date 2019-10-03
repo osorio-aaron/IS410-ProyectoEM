@@ -15,11 +15,11 @@
     <nav id="menu" class="navbar navbar-expand-lg navbar-light fixed-top hov">
         <!--Botón con el logo-->
         <a class="navbar-brand" href="#">
-                <img src="img/logo.svg">
-            </a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-            </button>
+            <img src="img/logo.svg">
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <!--Elementos de la barra-->
             <ul class="navbar-nav mr-auto ml-auto">
@@ -59,107 +59,190 @@
                 <li class="nav-item">
                     <a class="nav-link bld" href="#">Empresas</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link bld" href="#">Contacto</a>
-                </li>
             </ul>
             <div class="d-flex" id="navbarSupportedContent">
                 <!--Botón de Busqueda-->
-                <div class="nav-item"><a class="fa fa-search icon navbar-brand" href="#"></a></div>
+                <form>
+                    <div class="form-group nav-item input-search">
+                        <input class="form-control input-transparent" style="margin-right: 5px;" type="text" placeholder="Search...">
+                        <a class="fa fa-search icon navbar-brand" href="#"></a>
+                    </div>
+                </form>
                 <!--Botón de Inicio de Sesión-->
-                <div class="nav-item dropdown">
-                    <a class="fas fa-sign-in-alt icon navbar-brand dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <button type="button" class="btn btn-secondary dropdown-item bld" onclick="location.href='login.html'">Iniciar Sesión</button>
-                            <button type="button" class="btn btn-secondary dropdown-item bld">Registrarse</button>
-                        </div>
-                    </a>
-                </div>
+                <div class="nav-item"><a class="fas fa-sign-in-alt icon navbar-brand" href="#" data-toggle="modal" data-target="#modalUser"></a></div>
                 <!--Botón del carrito-->
-                <div class="nav-item"><a class="fas fa-shopping-cart icon navbar-brand" href="#"></a></div>
+                <div class="nav-item"><a class="fas fa-shopping-cart icon navbar-brand" href="#" data-toggle="modal" data-target="#modalShop"></a></div>
             </div>
         </div>
     </nav>
-    <main role="main" class="container">
+    <!-- Modal Login-->
+    <div class="modal fade" id="modalUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Correo Electronico</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su correo electronico">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su contraseña">
+                        </div>
+                    </form>
+                <a href="registrarse.html" target="_blank">¿No tienes una cuenta? <b>Registrate Ya</b></a>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Carrito-->
+    <div class="modal fade" id="modalShop" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Carrito de Compras</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body alert alert-warning" role="alert">
+                    ¡¡¡Debe de iniciar Sesión para acceder al carrito de compras!!!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Contenedor de artículos-->
+    <main role="main" style="margin-top: 100px" class="container">
         <div class="row">
             <div class="col-xl-3 col-sm-6">
-                <div class="producto">
-                    <div class="imagen-producto">
-                        <img class="img-fluid" src="img/prueba1.jpg">
+                <div class="producto" data-toggle="modal" data-target="#modalProducto">
+                    <div class="card-img-top">
+                        <img class="img-fluid img-thumbnail" src="img/prueba1.jpg">
                     </div>
                     <div class="info-producto">
-                        <h4>Nombre del producto</h4>
-                        <p>Info del Producto</p>
-                        <p>Precio</p>
-                        <p>Empresa</p>
+                        <h3>Samsung S10</h4>
+                        <h5>20,000.00 &nbsp;lps</h5>
+                        <h5>JETSTEREO</h5>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-sm-6">
                 <div class="producto">
-                    <div class="imagen-producto">
-                        <img class="img-fluid" src="img/prueba2.jpg">
+                    <div class="card-img-top">
+                        <img class="img-fluid img-thumbnail" src="img/prueba2.jpg">
                     </div>
                     <div class="info-producto">
-                        <h4>Nombre del producto</h4>
-                        <p>Info del Producto</p>
-                        <p>Precio</p>
-                        <p>Empresa</p>
+                        <h3>iPhone 5s</h3>
+                        <h5>Precio</h5>
+                        <h5>Empresa</h5>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-sm-6">
                 <div class="producto">
-                    <div class="imagen-producto">
-                        <img class="img-fluid" src="img/prueba3.jpg">
+                    <div class="card-img-top">
+                        <img class="img-fluid img-thumbnail" src="img/prueba3.jpg">
                     </div>
                     <div class="info-producto">
-                        <h4>Nombre del producto</h4>
-                        <p>Info del Producto</p>
-                        <p>Precio</p>
-                        <p>Empresa</p>
+                        <h3>imagen random</h3>
+                        <h5>Precio</h5>
+                        <h5>Empresa</h5>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-sm-6">
                 <div class="producto">
-                    <div class="imagen-producto">
-                        <img class="img-fluid" src="img/prueba4.jpg">
+                    <div class="card-img-top">
+                        <img class="img-fluid img-thumbnail" src="img/prueba4.jpg">
                     </div>
                     <div class="info-producto">
-                        <h4>Nombre del producto</h4>
-                        <p>Info del Producto</p>
-                        <p>Precio</p>
-                        <p>Empresa</p>
+                        <h3>Ventilador</h3>
+                        <h5>Precio</h5>
+                        <h5>Empresa</h5>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-sm-6">
                 <div class="producto">
-                    <div class="imagen-producto">
-                        <img class="img-fluid" src="img/prueba5.jpg">
+                    <div class="card-img-top">
+                        <img class="img-fluid img-thumbnail" src="img/prueba5.jpg">
                     </div>
                     <div class="info-producto">
-                        <h4>Nombre del producto</h4>
-                        <p>Info del Producto</p>
-                        <p>Precio</p>
-                        <p>Empresa</p>
+                        <h3>Reloj</h3>
+                        <h5>Precio</h5>
+                        <h5>Empresa</h5>
                     </div>
                 </div>
             </div>
 
         </div>
     </main>
+    <!--Modal Producto-->
+    <div id="modalProducto" tabindex="-1" role="dialog" class="modal fade quickview show" style="display: none; padding-right: 17px;" aria-modal="true">
+        <div role="document" class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12">
+                            <img src="img/prueba1.jpg" class="img-fluid">
+                        </div>
+                        <div class="col-xl-6 col-md-12">
+                            <h3 style="text-align: center;">Samsung S10</h3><br>
+                            <span class="d-flex"><h6 class="mr-auto text-product">LPS. 20,000.00</h6><h6 class="ml-auto text-product">20 Opiniones</h6></span>
+                            <h6 class="text-product">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime omnis aliquam dolorem eaque impedit praesentium nihil sed eligendi aspernatur hic.</h6>
+                            <div form-group>
+                                <label class="text-product" for="cantidadArticulos">Cantidad de Artículos</label>
+                                <input type="number" id="cantidadArticulos" class="form-control detail-quantity" value="1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-index">
+        <div class="row" style="padding:20px;">
+            <div class="col-xl-3 col-md-6 col-sm-12 foot-item">
+                <h5>Dashboard Administrativo</h5>
+                <ul style="margin-bottom: 0px;">
+                    <li><a href="admin/admin-enterprise.html">Empresarial</a></li>
+                    <li><a href="admin/admin-suser.html">Super Usuario</a></li>
+                </ul>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 foot-item">
+                <h5>Mision</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, maiores cum? Voluptate sed tempore quisquam maxime corrupti perspiciatis ipsum voluptatum!</p>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 foot-item">
+                <h5>Vision</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, maiores cum? Voluptate sed tempore quisquam maxime corrupti perspiciatis ipsum voluptatum!</p>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 foot-item">
+                <h5>Contactanos</h5>
+                <ul style="margin-bottom: 0px;">
+                    <li>correo.em@correo.com</li>
+                    <li>+504-95440680</li>
+                </ul>
+            </div>
+            <div class="mr-auto ml-auto" style="margin-top: 10px;">
+                <p style="text-align: center;">&copy; Easy Market. Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-        $(window).scroll(function(){
-            if($('#menu').offset().top > 82.5){
-                $('#menu').addClass("navbar-scroll");
-            }else{
-                $('#menu').removeClass("navbar-scroll");
-            }
-        });
-    </script>
+    <script src="js/controlador.js"></script>
 </body>
 </html>

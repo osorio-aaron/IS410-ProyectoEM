@@ -71,16 +71,53 @@ html {
     border: 1px solid #393e46;
 }
 .producto:hover{
-    background-color: white;
     border: 1px solid #00adb5;
 }
-.imagen-producto{
+.card-img-top{
     position: relative;
     border-bottom: 2px solid #393e46;
 }
-.imagen-producto:hover{
+.card-img-top:hover{
     border-bottom: 2px solid #00adb5;
 }
-.container{
-    margin-top: 100px;
+.info-producto{
+    text-align: center;
+}
+.registrarse{
+    display: block;
+    border-radius: 4px;
+    border: 1px white solid;
+    padding: 5px;
+}
+.input-transparent{
+    background-color: transparent;
+    border-color: white;
+}
+.footer-index{
+    background-color: #393e46;
+    color: #eeeeee86;
+}
+.foot-item{
+    margin-bottom: 15px;
+}
+.input-search{
+    display: flex!important;
+    margin-bottom: 0px;
+}
+.modal-content{
+    border: 0 solid rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+}
+.modal-lg{
+    margin: 28px 163px 28px 163px;
+    height: 719.66px;
+    max-width: 1000px!important;
+}
+.text-product{
+    color: #393e46;
+    margin-bottom: 20px;
+}
+.detail-quantity {
+    max-width: 5rem;
+    text-align: center;
 }
