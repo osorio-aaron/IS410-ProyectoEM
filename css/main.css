@@ -109,13 +109,13 @@ html {
     border-radius: 0px;
 }
 .modal-lg{
-    margin: 28px 163px 28px 163px;
     height: 719.66px;
     max-width: 1000px!important;
 }
 .text-product{
     color: #393e46;
     margin-bottom: 20px;
+    text-align: center;
 }
 .detail-quantity {
     max-width: 5rem;

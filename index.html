@@ -24,10 +24,10 @@
             <!--Elementos de la barra-->
             <ul class="navbar-nav mr-auto ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link bld" href="#">Ofertas de Hoy</a>
+                    <a class="nav-link bld" href="#">Ofertas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link bld" href="#">Promociones</a>
+                    <a class="nav-link bld" href="#">Proximas Ofertas</a>
                 </li>
                 <li class="nav-item dropdown">
                     <!--Botón desplegable de la barra-->
@@ -88,19 +88,20 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Correo Electronico</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su correo electronico">
+                            <label for="email">Correo Electronico</label>
+                            <input type="email" name="email" class="form-control" placeholder="correo@dominio.com" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Contraseña</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su contraseña">
+                            <label for="password">Contraseña</label>
+                            <input type="password" name="password" class="form-control" placeholder="Ingrese su contraseña" required>
+                        </div>
+                        <a href="registrarse.html" target="_blank">¿No tienes una cuenta? <b>Registrate Ya</b></a><br><br>
+                        <div style="text-align: right;">
+                            <input type="submit" value="Iniciar Sesión" class="btn btn-primary">
                         </div>
                     </form>
-                <a href="registrarse.html" target="_blank">¿No tienes una cuenta? <b>Registrate Ya</b></a>
                 </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                </div>
+
             </div>
         </div>
     </div>
@@ -129,7 +130,7 @@
             <div class="col-xl-3 col-sm-6">
                 <div class="producto" data-toggle="modal" data-target="#modalProducto">
                     <div class="card-img-top">
-                        <img class="img-fluid img-thumbnail" src="img/prueba1.jpg">
+                        <img class="img-thumbnail" src="img/prueba1.jpg">
                     </div>
                     <div class="info-producto">
                         <h3>Samsung S10</h4>
@@ -141,7 +142,7 @@
             <div class="col-xl-3 col-sm-6">
                 <div class="producto">
                     <div class="card-img-top">
-                        <img class="img-fluid img-thumbnail" src="img/prueba2.jpg">
+                        <img class="img-thumbnail" src="img/prueba2.jpg">
                     </div>
                     <div class="info-producto">
                         <h3>iPhone 5s</h3>
@@ -153,7 +154,7 @@
             <div class="col-xl-3 col-sm-6">
                 <div class="producto">
                     <div class="card-img-top">
-                        <img class="img-fluid img-thumbnail" src="img/prueba3.jpg">
+                        <img class="img-thumbnail" src="img/prueba3.jpg">
                     </div>
                     <div class="info-producto">
                         <h3>imagen random</h3>
@@ -165,7 +166,7 @@
             <div class="col-xl-3 col-sm-6">
                 <div class="producto">
                     <div class="card-img-top">
-                        <img class="img-fluid img-thumbnail" src="img/prueba4.jpg">
+                        <img class="img-thumbnail" src="img/prueba4.jpg">
                     </div>
                     <div class="info-producto">
                         <h3>Ventilador</h3>
@@ -177,7 +178,7 @@
             <div class="col-xl-3 col-sm-6">
                 <div class="producto">
                     <div class="card-img-top">
-                        <img class="img-fluid img-thumbnail" src="img/prueba5.jpg">
+                        <img class="img-thumbnail" src="img/prueba5.jpg">
                     </div>
                     <div class="info-producto">
                         <h3>Reloj</h3>
@@ -194,18 +195,34 @@
         <div role="document" class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                     <div class="row">
                         <div class="col-xl-6 col-md-12">
                             <img src="img/prueba1.jpg" class="img-fluid">
                         </div>
                         <div class="col-xl-6 col-md-12">
                             <h3 style="text-align: center;">Samsung S10</h3><br>
-                            <span class="d-flex"><h6 class="mr-auto text-product">LPS. 20,000.00</h6><h6 class="ml-auto text-product">20 Opiniones</h6></span>
-                            <h6 class="text-product">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime omnis aliquam dolorem eaque impedit praesentium nihil sed eligendi aspernatur hic.</h6>
-                            <div form-group>
-                                <label class="text-product" for="cantidadArticulos">Cantidad de Artículos</label>
-                                <input type="number" id="cantidadArticulos" class="form-control detail-quantity" value="1">
+                            <div class="d-flex row">
+                                <div class="col-lg-6 col-sm-12">
+                                    <h6 class="text-product">LPS. 20,000.00</h6>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <h6 class="text-product">20 Opiniones</h6>
+                                </div>
                             </div>
+                            <h6 class="text-product">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga sapiente odit aperiam itaque voluptatum error excepturi quod doloremque sunt accusantium id consectetur mollitia, vero necessitatibus, ratione, laudantium sint! Nisi accusamus ad commodi quas earum inventore repudiandae corrupti veritatis dolorum nemo?</h6>
+                            <form>    
+                                <div class="form-group" style="text-align: center;">
+                                    <label class="text-product" for="cantidadArticulos">Cantidad de Artículos</label>
+                                    <input type="number" name="cantidadArticulos" id="cantidadArticulos" class="form-control detail-quantity mr-auto ml-auto" min="1" max="10" required>
+                                </div>
+                                <div style="text-align: center">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-primary">Añadir al carrito</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -217,8 +234,8 @@
             <div class="col-xl-3 col-md-6 col-sm-12 foot-item">
                 <h5>Dashboard Administrativo</h5>
                 <ul style="margin-bottom: 0px;">
-                    <li><a href="admin/admin-enterprise.html">Empresarial</a></li>
-                    <li><a href="admin/admin-suser.html">Super Usuario</a></li>
+                    <li><a href="admin/admin-enterprise.html" target="_blank">Empresarial</a></li>
+                    <li><a href="admin/admin-suser.html" target="_blank">Super Usuario</a></li>
                 </ul>
             </div>
             <div class="col-xl-3 col-md-6 col-sm-12 foot-item">
@@ -234,6 +251,12 @@
                 <ul style="margin-bottom: 0px;">
                     <li>correo.em@correo.com</li>
                     <li>+504-95440680</li>
+                    <li>
+                        <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook">&nbsp;</i></a>
+                        <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter">&nbsp;</i></a>
+                        <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram">&nbsp;</i></a>
+                        <a href="http://linkedin.com" target="_blank"><i class="fab fa-linkedin-in">&nbsp;</i></a>
+                    </li>
                 </ul>
             </div>
             <div class="mr-auto ml-auto" style="margin-top: 10px;">
