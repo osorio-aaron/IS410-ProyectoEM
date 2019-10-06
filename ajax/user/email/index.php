@@ -21,9 +21,9 @@
         $mail->Subject = 'El equipo de Easy Market le informa:';
         $mail->Body = $codigo;
         if (!$mail->Send()) {
-            echo "Error: ".$mail->ErrorInfo;
+            echo '{"Error": "'.$mail->ErrorInfo.'"}';
         }else{
-            echo "Mensaje Enviado";
+            echo '{"Mensaje": "Enviado"}';
         }    
     }
 ?>

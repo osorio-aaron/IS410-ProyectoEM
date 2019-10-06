@@ -19,22 +19,24 @@
         </div>
         <main role="main" class="container" style="max-width: 450px;">
             <div class="registrarse">
-                <form>
+                <form id="user-login">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Correo Electronico</label>
-                        <input type="email" class="form-control input-transparent" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su correo electronico">
+                        <label for="user-email">Correo Electronico</label>
+                        <input type="email" name="email" class="form-control input-transparent" id="user-email" aria-describedby="emailHelp" placeholder="Ingrese su correo electronico">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Contraseña</label>
-                        <input type="password" class="form-control input-transparent" id="exampleInputPassword1" placeholder="Ingrese su contraseña">
+                        <label for="user-password">Contraseña</label>
+                        <input type="password" name="password" class="form-control input-transparent" id="user-password" placeholder="Ingrese su contraseña">
                     </div>
                     <a href="registrarse.html" target="_blank">¿No tienes una cuenta? <b>Registrate Ya</b></a><br>
-                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    <button onclick="" type="button" id="btn-login" class="btn btn-primary">Iniciar Sesión</button>
                 </form>
             </div>
         </main>
     </div>
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/controlador-login-user.js"></script>
+    
 </body>
 </html>
