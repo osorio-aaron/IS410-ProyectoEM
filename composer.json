@@ -1,0 +1,13 @@
+{
+    "name": "aaron-osorio/proyecto",
+    "description": "Proyecto Easy-Market",
+    "authors": [
+        {
+            "name": "Aaron",
+            "email": "aaron.osorio@unah.hn"
+        }
+    ],
+    "require": {
+        "kreait/firebase-php": "4.32"
+    }
+}
