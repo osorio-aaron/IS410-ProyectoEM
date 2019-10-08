@@ -1,9 +1,9 @@
 <?php
-    require_once('../../vendor/autoload.php');
+    require_once(__DIR__.'/../vendor/autoload.php');
     use Kreait\Firebase\Factory;
 
     class Database{
-        private $keyFile = '../../secret/easy-market-800b5-78af79defe5e.json';
+        private $keyFile = __DIR__.'/../secret/easy-market-800b5-78af79defe5e.json';
         private $URI = 'https://easy-market-800b5.firebaseio.com/';
         private $db;
 

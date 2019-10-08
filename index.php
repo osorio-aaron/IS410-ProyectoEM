@@ -86,18 +86,18 @@
                 </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="user-login">
                         <div class="form-group">
                             <label for="email">Correo Electronico</label>
-                            <input type="email" name="email" class="form-control" placeholder="correo@dominio.com" required>
+                            <input type="email" id="user-email" name="email" class="form-control" placeholder="correo@dominio.com" required>
                         </div>
                         <div class="form-group">
                             <label for="password">Contraseña</label>
-                            <input type="password" name="password" class="form-control" placeholder="Ingrese su contraseña" required>
+                            <input type="password" id="user-password" name="password" class="form-control" placeholder="Ingrese su contraseña" required>
                         </div>
                         <a href="registrarse.html" target="_blank">¿No tienes una cuenta? <b>Registrate Ya</b></a><br><br>
                         <div style="text-align: right;">
-                            <input type="submit" value="Iniciar Sesión" class="btn btn-primary">
+                            <input onclick="loginUser()" type="button" id="btn-login" value="Iniciar Sesión" class="btn btn-primary">
                         </div>
                     </form>
                 </div>
@@ -264,8 +264,9 @@
             </div>
         </div>
     </footer>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/controlador.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/controlador.js"></script>
+    <script type="text/javascript" src="js/controlador-login-user.js"></script>
 </body>
 </html>

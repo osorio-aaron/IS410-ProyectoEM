@@ -35,4 +35,9 @@
         echo $u->actualizarUsuario($database->getDB(),$_GET['id']);
         exit();
     }
+
+    if($_SERVER['REQUEST_METHOD'] == 'GET'){
+        Usuario::verificarEmail($database->getDB(), $_GET['userEmail']);
+        exit();
+    }
 ?>

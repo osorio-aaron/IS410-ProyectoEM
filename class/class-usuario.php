@@ -96,8 +96,35 @@
                 setcookie('key',$respuesta['key'], time() + (86400 * 15), "/");
                 setcookie('email',$respuesta['email'], time() + (86400 * 15), "/");
                 setcookie('token',$respuesta['token'], time() + (86400 * 15), "/");
+
+                $db->getReference('users/'.$key.'/token')
+                    ->set($respuesta["token"]);
             }
             echo json_encode($respuesta);
+        }
+        public static function verificarEmail($db, $email){
+            $result = $db->getReference('users')
+                ->orderByChild('email')
+                ->equalTo($email)
+                ->getSnapshot()
+                ->getValue();
+            
+            $key = array_key_first($result);
+            if ( isset($result[$key]['email']) && $result[$key]['email'] == $email){
+                echo '{"mensaje":"El usuario con llave '.$key.' tiene vinculado este correo", "valor":"false"}';
+            }
+            else
+                echo '{"mensaje":"Correo disponible", "valor":"true"}';
+        }
+
+        public static function verificarAutenticacion($db){
+            $result = $db->getReference('users')
+                ->getChild($_COOKIE['key'])
+                ->getValue();
+            if ($result['token'] == $_COOKIE['token'])
+                return true;
+            else
+                return false;
         }
     }
 ?>
