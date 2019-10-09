@@ -110,7 +110,7 @@
                 ->getValue();
             
             $key = array_key_first($result);
-            if ( isset($result[$key]['email']) && $result[$key]['email'] == $email){
+            if (isset($result[$key]['email']) && $result[$key]['email'] == $email){
                 echo '{"mensaje":"El usuario con llave '.$key.' tiene vinculado este correo", "valor":"false"}';
             }
             else
@@ -118,13 +118,24 @@
         }
 
         public static function verificarAutenticacion($db){
+            if (!isset($_COOKIE['key'])){
+                echo '{"valor":"No se ha iniciado sesion"}';
+                exit();
+            }
             $result = $db->getReference('users')
                 ->getChild($_COOKIE['key'])
                 ->getValue();
             if ($result['token'] == $_COOKIE['token'])
-                return true;
+                echo '{"valor": "valido", "infoUser": '.json_encode($result).'}';
             else
-                return false;
+                echo '{"valor":"No se ha iniciado sesion"}';
+        }
+
+        public static function limpiarCookies(){
+            setcookie('email', "", time() - 3600, "/");
+            setcookie('key', "", time() - 3600, "/");
+            setcookie('token', "", time() - 3600, "/");
+            header('Location: ../../index.php');
         }
     }
 ?>

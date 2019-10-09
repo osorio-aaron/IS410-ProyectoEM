@@ -60,7 +60,7 @@
                     <a class="nav-link bld" href="#">Empresas</a>
                 </li>
             </ul>
-            <div class="d-flex" id="navbarSupportedContent">
+            <div class="d-flex navbar-right" id="navbarSupportedContent">
                 <!--Botón de Busqueda-->
                 <form>
                     <div class="form-group nav-item input-search">
@@ -68,10 +68,10 @@
                         <a class="fa fa-search icon navbar-brand" href="#"></a>
                     </div>
                 </form>
-                <!--Botón de Inicio de Sesión-->
-                <div class="nav-item"><a class="fas fa-sign-in-alt icon navbar-brand" href="#" data-toggle="modal" data-target="#modalUser"></a></div>
                 <!--Botón del carrito-->
                 <div class="nav-item"><a class="fas fa-shopping-cart icon navbar-brand" href="#" data-toggle="modal" data-target="#modalShop"></a></div>
+                <!--Botón de Inicio de Sesión-->
+                <div class="nav-item dropdown" id="btnUser"><a class="fas fa-sign-in-alt icon navbar-brand" data-toggle="modal" data-target="#modalUser"></a></div>
             </div>
         </div>
     </nav>

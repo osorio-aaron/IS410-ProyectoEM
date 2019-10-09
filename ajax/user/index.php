@@ -5,7 +5,7 @@
     
     $database = new Database();
 
-    if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_GET['accion']) && $_GET['accion']=='login'){ 
+    if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_GET['accion']) && $_GET['accion']=='login'){
         Usuario::login($_POST['email'], $_POST['password'] ,$database->getDB());
         exit();
     }
@@ -36,8 +36,17 @@
         exit();
     }
 
-    if($_SERVER['REQUEST_METHOD'] == 'GET'){
+    if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['userEmail'])){
         Usuario::verificarEmail($database->getDB(), $_GET['userEmail']);
         exit();
+    }
+
+    if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['accion']) && $_GET['accion'] == 'verificar'){
+        Usuario::verificarAutenticacion($database->getDB());
+        exit();
+    }
+
+    if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['accion']) && $_GET['accion'] == 'limpiarCookies'){
+        Usuario::limpiarCookies();
     }
 ?>
