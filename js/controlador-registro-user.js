@@ -25,6 +25,7 @@ function verificarUsuario(){
     let mail = new FormData();
     mail.append('correo', email);
     mail.append('codigo',codigoTemp);
+    console.log(mail);
     let password = document.getElementById('userPassword').value;
     let passwordConfirm = document.getElementById('passwordConfirm').value;
     if(password == passwordConfirm){
@@ -36,16 +37,16 @@ function verificarUsuario(){
                 console.log(res.mensaje);
                 if (res.valor == 'true')
                     enviarEmail(mail);
-                else
+                else{
                     alert('Ya hay una cuenta vinculada con este correo');
                     limpiarCampos();
+                }
             },
             error:function(error){
                 console.error(error);
             }
         })
-    }
-    else{
+    }else{
         limpiarCampos();
     }
 }
@@ -69,9 +70,10 @@ function registrarUsuario(){
                 console.error(error)
             }
         })
-    }else
+    }else{
         alert('Codigo Incorrecto');
         limpiarCampos();
+    }
 }
 function generarCodigo(length) {
     var result = '';
@@ -130,5 +132,4 @@ function enviarEmail(email){
             console.error(error);
         }
     });
-    limpiarCampos();
 }

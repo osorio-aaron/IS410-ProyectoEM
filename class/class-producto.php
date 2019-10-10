@@ -20,6 +20,7 @@ class Producto{
 		$imagen,
 		$comentarios,
 		$calificacion,
+		$promocion,
 		$inicioPromocion,
 		$finPromocion
 	){
@@ -31,6 +32,7 @@ class Producto{
 		$this->imagen = $imagen;
 		$this->comentarios = $comentarios;
 		$this->calificacion = $calificacion;
+		$this->promocion = $promocion;
 		$this->inicioPromocion = $inicioPromocion;
 		$this->finPromocion = $finPromocion;
 	}
@@ -45,6 +47,7 @@ class Producto{
 		."imagen: ".$this->imagen." , "
 		."comentarios: ".$this->comentarios." , "
 		."calificacion: ".$this->calificacion." , "
+		."promocion: ".$this->promocion." , "
 		."inicioPromocion: ".$this->inicioPromocion." , "
 		."finPromocion: ".$this->finPromocion;
 		return $var."}";
@@ -106,6 +109,15 @@ class Producto{
 	public function setCalificacion($calificacion){
 		$this->calificacion = $calificacion;
 	}
+	
+	public function getPromocion(){
+		return $this->promocion;
+	}
+
+	public function setPromocion($promocion){
+		$this->promocion = $promocion;
+	}
+
 	public function getInicioPromocion(){
 		return $this->inicioPromocion;
 	}

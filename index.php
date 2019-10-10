@@ -234,8 +234,7 @@
             <div class="col-xl-3 col-md-6 col-sm-12 foot-item">
                 <h5>Dashboard Administrativo</h5>
                 <ul style="margin-bottom: 0px;">
-                    <li><a href="admin/admin-enterprise.html" target="_blank">Empresarial</a></li>
-                    <li><a href="admin/admin-suser.html" target="_blank">Super Usuario</a></li>
+                    <li><a href="admin/login.html" target="_blank">Empresarial</a></li>
                 </ul>
             </div>
             <div class="col-xl-3 col-md-6 col-sm-12 foot-item">

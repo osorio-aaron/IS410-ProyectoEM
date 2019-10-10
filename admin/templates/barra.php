@@ -32,16 +32,6 @@
               <!-- User image -->
               <li class="user-header">
                 <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-12 text-center">
-                    <a href="#">Sales</a>
-                  </div>
-                </div>
-                <!-- /.row -->
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
